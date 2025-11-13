@@ -1,0 +1,1 @@
+# install-commitlint-pc
