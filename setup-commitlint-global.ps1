@@ -46,9 +46,12 @@ git config --global init.templatedir "$HOME\.git-templates"
 Write-Host "=== Creando hook global commit-msg ==="
 $HookFile = "$TemplateDir\commit-msg"
 @"
-#!/bin/sh
-npx --no -- commitlint --config "$HOME/.config/commitlint.config.js" --edit $1
+#!/usr/bin/env pwsh
+
+npx --no -- commitlint --config "$env:USERPROFILE\.config\commitlint.config.js" --edit $args[0]
 "@ | Set-Content $HookFile -Encoding ASCII
+
+Set-ExecutionPolicy -Scope CurrentUser RemoteSigned
 
 Write-Host "=== Instalación completada ==="
 Write-Host "Para repos existentes: git init"
