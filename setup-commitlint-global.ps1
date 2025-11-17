@@ -46,7 +46,8 @@ git config --global init.templatedir "$HOME\.git-templates"
 Write-Host "=== Creando hook global commit-msg ==="
 $HookFile = "$TemplateDir\commit-msg"
 @"
-commitlint --config "$HOME/.config/commitlint.config.js" --edit "\$1"
+#!/bin/sh
+npx --no -- commitlint --config "$HOME/.config/commitlint.config.js" --edit $1
 "@ | Set-Content $HookFile -Encoding ASCII
 
 Write-Host "=== Instalación completada ==="
