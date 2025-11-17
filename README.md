@@ -29,7 +29,7 @@ A partir de ahora, todos tus commits se validarán automáticamente
 Copia y pega este comando:
 
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/ITEC-BCN/install-commitlint-pc/refs/heads/master/setup-commitlint-global.sh)
+bash <(wget -qO- https://raw.githubusercontent.com/ITEC-BCN/install-commitlint-pc/refs/heads/master/setup-commitlint-global.sh)
 ```
 ## 🟪 Windows (PowerShell)
 
