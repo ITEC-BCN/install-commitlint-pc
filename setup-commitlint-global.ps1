@@ -5,7 +5,7 @@
 Write-Host "=== Instalando Node.js 24 usando winget ==="
 
 # Intenta instalar Node 24 LTS
-winget install OpenJS.NodeJS.24 -e --silent --accept-source-agreements --accept-package-agreements
+winget install OpenJS.NodeJS.LTS -e --silent --accept-source-agreements --accept-package-agreements
 
 # Añadir Node al PATH temporalmente para esta sesión
 $NodePath = "C:\Program Files\nodejs"
